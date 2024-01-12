@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  test_api:
+    build: ./api
+    container_name: test_api_c
+    ports:
+      - '4000:4000'
+  test_app:
+    build: ./app
+    container_name: test_app_c
+    ports:
+      - '5000:5000'
+  test_app_api:
+    build: ./myblog
+    container_name: test_app_c2
+    ports:
+      - '3000:3000'
